@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+httpx
+xmltodict
+pymongo
+dotenv
+yt-dlp
+google-adk
