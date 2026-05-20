@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir google-adk pymongo
+RUN pip install --no-cache-dir google-adk pymongo python-dotenv
 
 COPY . .
 

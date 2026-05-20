@@ -44,7 +44,7 @@ async def fetch_and_store_video(video_id: str):
         "like_count": int(stats.get("likeCount", 0)),
         "description": snippet.get("description", ""),
         "channel_id": snippet.get("channelId", ""),
-        "channel_title": snippet.get("channelTitle", ""),
+        "channel_name": snippet.get("channelTitle", ""),
         "ingested_at": datetime.now(timezone.utc).isoformat()
     }
 

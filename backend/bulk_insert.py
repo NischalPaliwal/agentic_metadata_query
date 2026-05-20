@@ -15,6 +15,7 @@ def initial_ingestion(channel_name: str, limit=10):
     }
     with YoutubeDL(options) as ydl:
         info = ydl.extract_info(f"https://www.youtube.com/@{channel_name}/videos", download=False)
+        docs = []
         for entry in info['entries']:
             doc = {
                 'channel_name': channel_name,
@@ -26,7 +27,9 @@ def initial_ingestion(channel_name: str, limit=10):
                 'like_count': entry.get('like_count', 0),
                 'description': entry.get('description')
             }
-            get_collection().insert_one(doc)
+            docs.append(doc)
+        if docs:
+            get_collection().insert_many(docs)
     return "Metadata uploaded successfully!"
 
 try:

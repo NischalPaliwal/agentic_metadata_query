@@ -6,3 +6,4 @@ pymongo
 dotenv
 yt-dlp
 google-adk
+litellm
