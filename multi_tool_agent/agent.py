@@ -92,7 +92,7 @@ def count_videos_by_topic(channel_name: str, topic: str, start_date: str = None,
 
 root_agent = Agent(
     name="db_query_agent",
-    model="openai/gpt-4o",
+    model="gemini-2.5-flash",
     instruction="""
         You are a helpful and professional assistant that answers questions about YouTube videos
         stored in our database. We track videos from channels like Bloomberg Markets
