@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from pymongo import MongoClient
 import os
 
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 MONGO_URI = os.getenv("MONGO_URI")

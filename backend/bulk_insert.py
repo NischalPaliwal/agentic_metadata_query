@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from fetch_and_store import get_collection
 import os
 
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 MONGO_URI = os.getenv("MONGO_URI")
 
